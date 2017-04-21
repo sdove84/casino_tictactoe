@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>tic-tac-toe</title>
+    <title>Casino Tic-Tac-Toe</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--<link href="style.css" rel="stylesheet">-->
+    <link href="style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+<<<<<<< HEAD
     <style>
         html {
             background: url(images/craps6.jpg) no-repeat center center fixed;
@@ -183,6 +185,8 @@
             background-color:white;
         }
     </style>
+=======
+>>>>>>> 9c1797ab43c1551277b2720e971798c1cb5705e3
 </head>
 <body>
 <div id="settings-container">
@@ -205,7 +209,6 @@
     </div>
 </div>
 
-
 <div id="stats_main" class="col-xs-12 col-lg-12">
 
     <div id="stats_area" class="col-xs-3 col-lg-3">
@@ -225,11 +228,29 @@
         <button id="ultimate_button" class="btn btn-info">Ultimate</button>
         <button id="settings_button" class="btn btn-info">settings</button>
         <button id="reset_button" class="btn btn-warning">reset</button>
-        <!--<div id="timer">-->
-        <!--timer-->
-        <!--</div>-->
     </div>
 </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Game Over!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <div id="players_area" class="col-xs-12 col-lg-12">
     <div id="players" class="col-xs-3 col-lg-3">
 
@@ -246,7 +267,6 @@
         </div>
     </div>
     <div id="game_area" class="col-xs-9 col-lg-9">
-        <!--<h1>Game Area</h1>-->
         <div class="game_board"></div>
     </div>
 </div>

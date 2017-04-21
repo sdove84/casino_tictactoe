@@ -9,41 +9,61 @@ html {
     text-align: center;
     color: white;
 }
-
 #stats_area {
     text-align: center;
-
+    border: 2px solid white;
+    border-radius: 20px;
+    padding-bottom: 9px;
+    background-color: rgba(228,255,0,0.5);
 }
 #stats_main{
-    background-color: rgba(255,0,0,0.5);
-    padding: 0;
-}
 
-ul {
+    padding: 0px;
+
+
+}
+#stats_main ul, #stats_main h1 {
+    margin: 0px;
     list-style-type: none;
     padding-left: 0;
 }
-
 #buttons {
-    background-color: rgba(228,255,0,0.5);
+    /*background-color: rgba(255,0,0,0.5);*/
     text-align: center;
     padding-top: 4%;
     padding-bottom: 1.5%;
 }
+#buttons button {
+    width: 100px;
+}
+#buttons button:first-child {
+    margin-right: 50px;
+}
+#buttons h1 {
+    padding-bottom:0;
+    margin-top:-30px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 5
+}
 
 #game_area {
+    /*background-color: rgba(144, 238, 144, 0.51);*/
     text-align: center;
     height: 80vh;
     position:relative;
 }
 
 .game_board {
-    background-color: white;
     height: 75vh;
     width: 75vh;
     margin:auto;
     /*padding: 1% 25% 0% 15%;*/
     text-align: center;
+    margin-top:1%;
+}
+@keyframes blinker {
+    50% { opacity: 0; }
 }
 
 #player_1 {
@@ -54,25 +74,45 @@ ul {
     */
     text-align: center;
     height: 40vh;
-    background-color: rgba(0,102,255,0.5);
-    border-radius: 40%;
+    font-size: 100px;
+    background-color: rgba(8, 8, 8, 0.38);
+    border-radius: 60%;
+    margin-left: 5%;
+    margin-right: 10%;
 }
 
 #player_2 {
     /*background-color: aqua;*/
     text-align: center;
     height: 40vh;
-    background-color: rgba(255,0,212,0.5);
-    border-radius: 40%;
+    font-size: 100px;
+    background-color: rgba(8, 8, 8, 0.38);
+    border-radius: 60%;
+    margin-left: 5%;
+    margin-right: 10%;
 }
 #players{
     padding: 0;
 }
+#player_1 img, #player_2 img {
+    width:60%;
+    max-height:70%;
+}
 #player_1 > h1, #player_2 > h1{
-    margin-top: 0;
+    margin-top:0px;
+    padding-top: 50px;
+}
+h2{
+    margin: 0;
+    color: red;
+    text-shadow: white 3px 3px 3px;
+    font-size: 50px;
 }
 #players_area{
     padding: 0;
+}
+.current-grid {
+    background-color: #ff0;
 }
 
 /* js */
@@ -83,13 +123,51 @@ ul {
     border: 1px solid black;
     display: inline-block;
     font-size: initial;
-    float: left;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    float:left;
+}
+.ttt_cell:nth-child(even){
+    /*background-color: rgba(255, 0, 0, 0.75);*/
+}
+.game_board img {
+    height:100%;
+    width:100%;
+    /*float: left;*/
 }
 .active_player{
-    background-color: red;
+    color: white;
+    border-radius: 5px;
 }
-
+.active_player span {
+    animation: blinker 1s linear infinite;
+}
 #timer {
     background: white;
+    position: relative;
+}
+.game_over {
+    background-color: #999;
+}
+#settings-container {
+    display:none;
+    position: fixed;
+    z-index: 5;
+    min-height:100%;
+    min-width: 100%;
+}
+#settings-popup-bg{
+    height:100%;
+    width: 100%;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.75);
 
+}
+#settings-popup {
+    margin:auto;
+    position:relative;
+    margin-top: 10%;
+    width:33vw;
+    height:25vw;
+    background-color:white;
 }
