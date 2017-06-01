@@ -17,9 +17,7 @@ html {
     background-color: rgba(228,255,0,0.5);
 }
 #stats_main{
-
-    padding: 0px;
-
+    padding: 0;
 
 }
 #stats_main ul, #stats_main h1 {
@@ -28,7 +26,6 @@ html {
     padding-left: 0;
 }
 #buttons {
-    /*background-color: rgba(255,0,0,0.5);*/
     text-align: center;
     padding-top: 4%;
     padding-bottom: 1.5%;
@@ -44,11 +41,10 @@ html {
     margin-top:-30px;
     font-size: 20px;
     color: white;
-    text-shadow: 5
+    text-shadow: 5px;
 }
 
 #game_area {
-    /*background-color: rgba(144, 238, 144, 0.51);*/
     text-align: center;
     height: 80vh;
     position:relative;
@@ -58,7 +54,6 @@ html {
     height: 75vh;
     width: 75vh;
     margin:auto;
-    /*padding: 1% 25% 0% 15%;*/
     text-align: center;
     margin-top:1%;
 }
@@ -67,7 +62,6 @@ html {
 }
 
 #player_1 {
-    /*background-color: darkred;*/
     /*
     javascript adds active_player class to change the background for these
     the ID css overrides the class css from javascript so i commented it out temporarily
@@ -82,7 +76,6 @@ html {
 }
 
 #player_2 {
-    /*background-color: aqua;*/
     text-align: center;
     height: 40vh;
     font-size: 100px;
@@ -97,6 +90,7 @@ html {
 #player_1 img, #player_2 img {
     width:60%;
     max-height:70%;
+    padding-bottom: 59px;
 }
 #player_1 > h1, #player_2 > h1{
     margin-top:0px;
@@ -133,7 +127,6 @@ h2{
 .game_board img {
     height:100%;
     width:100%;
-    /*float: left;*/
 }
 .active_player{
     color: white;
@@ -171,3 +164,4 @@ h2{
     height:25vw;
     background-color:white;
 }
+
